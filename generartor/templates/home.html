@@ -1,0 +1,49 @@
+{% extends 'layout.html' %} {% block content %} {% load static%}
+<div class="section is-medium is-align-content-center">
+    <div class="field">
+        <form action='password'>
+            <h1 class="title">Generador de Contraseña</h1>
+            <label for="length" class="label">Selecciona el tamaño de la contaseña</label>
+            <div class="control">
+                <div class="select">
+                    <select name="length" id="length">
+                        <option value="6">6 caracteres</option>
+                        <option value="7">7 caracteres</option>
+                        <option value="8">8 caracteres</option>
+                        <option value="9">9 caracteres</option>
+                        <option value="10">10 caracteres</option>
+                        <option value="11">11 caracteres</option>
+                        <option value="12">12 caracteres</option>
+                        <option value="13">13 caracteres</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control">
+                <label for="uppercase" class="checkbox">
+                    <input type="checkbox" name="uppercase" id="uppercase">
+                    Mayusculas</label>
+            </div>
+
+            <div class="control">
+                <label for="special" class="checkbox">
+                        <input type="checkbox" name="special" id="special">
+                        Caracteres especiales</label>
+            </div>
+
+            <div class="control">
+                <label for="numbers" class="checkbox">
+                            <input type="checkbox" name="numbers" id="numbers">
+                            Numeros</label>
+            </div>
+
+            <div class="control">
+                <button class="button is-link">Enviar</button>
+                <input class="button is link" type="reset">
+            </div>
+
+            <!-- <input type="button" id="boton" value="Enviar"> -->
+        </form>
+    </div>
+</div>
+{% endblock %}
